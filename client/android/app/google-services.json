@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "139730155045",
+    "project_id": "clientservercommands",
+    "storage_bucket": "clientservercommands.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139730155045:android:57774f91570dad0b4b71cc",
+        "android_client_info": {
+          "package_name": "com.mobile.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139730155045-46rksge4qvaf31te7ijg9krfus86cce6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.client",
+            "certificate_hash": "6e400ace88c38c80fbf083eaf8565ea717835845"
+          }
+        },
+        {
+          "client_id": "139730155045-8nevh7lnurgimkepemcbg8os3jrb4b3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.client",
+            "certificate_hash": "b2c7e9421e6b244e501b95499ebad3396280b5ce"
+          }
+        },
+        {
+          "client_id": "139730155045-pr3r2rppj25of9ci3u27ub338t381o18.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.client",
+            "certificate_hash": "f376ac7677d20c32e47956e35404dea062f9b3c8"
+          }
+        },
+        {
+          "client_id": "139730155045-t31765cici10kienlen93v0d3ln2avia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrvaTR8s9qBI7CMXWcaBNKVuQGsSrJN34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139730155045-t31765cici10kienlen93v0d3ln2avia.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139730155045-d5d5anvucod5epeajaloqor05srf4sik.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobile.client"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139730155045:android:02492873775de4c54b71cc",
+        "android_client_info": {
+          "package_name": "com.mobile.server"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139730155045-9b9a0m64uuuam3vvk0vctgdgfhjmmfqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.server",
+            "certificate_hash": "f376ac7677d20c32e47956e35404dea062f9b3c8"
+          }
+        },
+        {
+          "client_id": "139730155045-9sbeinjj0jcah48p1eqrtganfgrdn9p0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.server",
+            "certificate_hash": "b2c7e9421e6b244e501b95499ebad3396280b5ce"
+          }
+        },
+        {
+          "client_id": "139730155045-fflgkg5710f5lk10977q5nr1l2r409kb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mobile.server",
+            "certificate_hash": "6e400ace88c38c80fbf083eaf8565ea717835845"
+          }
+        },
+        {
+          "client_id": "139730155045-t31765cici10kienlen93v0d3ln2avia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrvaTR8s9qBI7CMXWcaBNKVuQGsSrJN34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139730155045-t31765cici10kienlen93v0d3ln2avia.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "139730155045-d5d5anvucod5epeajaloqor05srf4sik.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobile.client"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
