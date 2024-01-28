@@ -1,0 +1,42 @@
+default_platform(:ios)
+
+fastlane_require "dotenv"
+
+before_all do 
+	Dotenv.load ".env.secret"
+end
+
+desc "Create app on App Store Connect"
+lane :create_app do
+	create_app_online #produce
+end
+
+platform :ios do
+	before_all do
+		Dotenv.load ".env.ios"
+	end
+
+	desc "Signing the app"
+	lane :signing do
+		sync_code_signing #match
+		
+		mapping = Actions.lane_context[
+			SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING
+		]
+		update_code_signing_settings(
+			profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
+		)
+	end
+	
+	desc "Building the app"
+	lane :build do
+		signing
+		build_ios_app #gym
+	end
+	
+	lane "Releasing to TestFlight"
+	lane :release do
+		build
+		upload_to_app_store #deliver
+	end
+end
