@@ -1,0 +1,83 @@
+name: Build_Flutter
+
+on:
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+
+jobs:
+  build-client:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+        
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.2.3'
+      
+      - name: Get dependencies
+        run: flutter pub get
+        working-directory: ./client
+        
+      - name: Build Apk
+        run: flutter build apk
+        working-directory: ./client
+        
+      - name: Build ios
+        run: flutter build ios --release --no-codesign
+        working-directory: ./client
+      
+      - name: Bundle Install
+        run: bundle install
+        working-directory: ./
+      
+      - name: Create App on App Store Connect
+        run: fastlane create_app
+        working-directory: ./client/ios
+        
+      - name: Upload to App Store Testflight
+        run: fastlane ios release
+        working-directory: ./client/ios
+        
+  build-server:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+        
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.2.3'
+      
+      - name: Get dependencies
+        run: flutter pub get
+        working-directory: ./server
+        
+      - name: Build Apk
+        run: flutter build apk
+        working-directory: ./server
+        
+      - name: Build ios
+        run: flutter build ios --release --no-codesign
+        working-directory: ./server
+      
+      - name: Bundle Install
+        run: bundle install
+        working-directory: ./
+        
+      - name: Create App on App Store Connect
+        run: fastlane create_app
+        working-directory: ./server/ios
+        
+      - name: Upload to App Store Testflight
+        run: fastlane ios release
+        working-directory: ./server/ios
